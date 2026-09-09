@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Strategic IT Consulting",
+    "description": "Enterprise-grade IT support and infrastructure optimization designed to scale with your business.",
+    "image": {
+      "url": "images/features/noun_branding_1885335.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "Software Development",
+    "description": "Full-cycle software engineering, maintenance, and custom solutions built for performance and security.",
+    "image": {
+      "url": "images/features/noun_The Process_1885341.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "Specialized Tech Training",
+    "description": "Expert-led instruction on operating systems, security protocols, and productivity tools.",
+    "image": {
+      "url": "images/features/noun_3d modeling_1885342.svg",
+      "width": 80,
+      "height": 80
+    }
+  }
+]
