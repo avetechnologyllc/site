@@ -26,3 +26,7 @@ Thumbs.db
 .Trashes
 .idea
 .vscode/
+
+# Secrets
+.pat
+*.token
