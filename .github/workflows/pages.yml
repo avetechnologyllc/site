@@ -16,6 +16,9 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  BASEURL: "/site"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,17 +30,13 @@ jobs:
           ruby-version: "3.2.2"
           bundler-cache: true
 
-      # Injects the right baseurl/url: "/site" on github.io, "" once the
-      # custom domain is set. No need to edit _config.yml by hand.
-      - id: pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: jekyll
-
       - name: Build
         env:
           JEKYLL_ENV: production
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        # BASEURL must match where the site is served from:
+        #   "/site"  -> https://avetechnologyllc.github.io/site/
+        #   ""       -> once the custom domain avetechnology.xyz is live
+        run: bundle exec jekyll build --baseurl "$BASEURL"
 
       - uses: actions/upload-pages-artifact@v3
 
