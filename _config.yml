@@ -2,6 +2,10 @@ title: AVE Technology
 description: Scalable Software Solutions, Cloud Infrastructure & Modern Tech Training
 url: "https://avetechnology.xyz"
 baseurl: ""
+# Emit about/index.html instead of about.html, so the /about/ URLs used in
+# _data/menus.yml resolve. Netlify masked this with its pretty-URL handling;
+# GitHub Pages does not.
+permalink: pretty
 date_format: "%d %B %Y"
 
 # Contact Data
